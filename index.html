@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="https://code.angularjs.org/1.6.9/angular-messages.min.js"></script>
+	
+	<head>
+		<style>
+		html {
+			font-family: Arial, Helvetica, sans-serif; /*Serif fonts are not good screen fonts */
+		}
+		div.signup {/* Center the input fields */
+		  width:350px;
+		  margin: auto; 
+		  display: block;
+    	  text-align: center;
+		}
+		body{
+
+		}
+		div.signup input {
+			margin-bottom: 8px; /* To meet the 8px vertical margin reuirement */
+			border-radius: 4px; /* Rounded Corners requirement, I thought 4px radius was a bit better appearance than 2 */
+			border:1px solid #cccccc; /* I like simplier looking input text boxes */
+			box-shadow: none; /* Remove the shadow effect, so 90s */
+			padding: 4px; /*Give the input some room */
+		}
+		form {
+			margin-left: auto;
+		    margin-right: auto;
+		    text-align: left;
+		}
+		.validationError {
+			display: inline-flex;
+			font-size: 0.8em;
+			color: red;
+		}
+		</style>
+		<title>Code Challenge Signup</title>
+	</head>
+  	<body ng-app="">
+		<div class="signup">
+			<form name="signupForm">
+				<div class="signupLabel">Username</div>
+				<input name="username" type="text" ng-model="username" maxlength="15" required>
+				<span class="validationError" ng-show="signupForm.username.$touched && signupForm.username.$invalid">Username is required</span>
+
+				<div class="signupLabel">Email</div>
+				<input name="signupEmail" type="email" ng-model="signupEmail" required>
+				<span class="validationError" ng-show="signupForm.signupEmail.$touched && signupForm.signupEmail.$error.required">Email is required</span>
+				<span class="validationError" ng-show="signupForm.signupEmail.$touched && signupForm.signupEmail.$error.email">Email is invalid</span>
+				<div ng-messages="signupForm.signupEmail.$invalid" ng-messages-include="messages.html"></div>
+				
+				<div class="signupLabel">Password</div>
+				<input name="password" type="Password" ng-model="password" required>
+				<span class="validationError" ng-show="signupForm.password.$touched && signupForm.password.$invalid">Password is required</span>
+				
+				<div class="signupLabel">Confirm Password</div>
+				<input name="confirmPassord" type="Password" ng-model="confimPassword" required ng-pattern="password" >
+				<span class="validationError"ng-show="signupForm.confirmPassord.$touched &&signupForm.confirmPassord.$error.pattern" ng-message="">Passwords do not match</span>
+				<div ng-messages="signupForm.confirmPassword.$error" ng-messages-include="messages.html"></div>
+				
+				<div>
+					<input type="submit" value="Signup" ng-disabled="signupForm.$invalid">
+				</div>
+			</form>
+			
+		</div> 
+  	</body>
+</html>
