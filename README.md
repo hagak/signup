@@ -14,7 +14,8 @@ Create a user signup that accepts the following fields with respective labels:
 * Please show an error when the user clicks outside the field and the info entered is
 incorrect.
 * Create submit button that is disabled until all requirements are met.
-Follow the following style rules:
+
+#### Follow the following style rules:
 * Align the fields vertically in a ‘stack’ like format.
 * Center the input fields on the page.
 * Make sure there is at least 8px of vertical margin between each field. (and
