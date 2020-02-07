@@ -1,6 +1,6 @@
 # Signup Page for Code Challenge
 
-This project is for a Code Challenge to develop a simple Webserver with the following requirements:
+This project is for a Code Challenge to develop a simple Webserver using AngularJS with the following requirements:
 Create a user signup that accepts the following fields with respective labels:
 * Username
 * Email
