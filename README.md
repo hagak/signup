@@ -7,7 +7,7 @@ Create a user signup that accepts the following fields with respective labels:
 * Password
 * Confirm Password
 
-####Ensure the following prerequisites:
+#### Ensure the following prerequisites:
 * Make sure a username cannot be longer than 15 characters.
 * Validate the email addresses to spec: https://stackoverflow.com/a/2049510
 * Confirm the ‘Password’ and ‘Confirm Password’ fields match.
