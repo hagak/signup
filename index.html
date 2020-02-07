@@ -13,9 +13,6 @@
 		  display: block;
     	  text-align: center;
 		}
-		body{
-
-		}
 		div.signup input {
 			margin-bottom: 8px; /* To meet the 8px vertical margin reuirement */
 			border-radius: 4px; /* Rounded Corners requirement, I thought 4px radius was a bit better appearance than 2 */
@@ -36,8 +33,10 @@
 		</style>
 		<title>Code Challenge Signup</title>
 	</head>
+
   	<body ng-app="">
 		<div class="signup">
+
 			<form name="signupForm">
 				<div class="signupLabel">Username</div>
 				<input name="username" type="text" ng-model="username" maxlength="15" required>
